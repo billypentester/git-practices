@@ -7,6 +7,11 @@
     --senary-color: #0ff;
 }
 
+.new-class {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
