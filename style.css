@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #f00;
+    --secondary-color: #0f0;
+    --tertiary-color: #00f;
+    --quaternary-color: #ff0;
+    --quinary-color: #f0f;
+    --senary-color: #0ff;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
