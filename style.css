@@ -31,3 +31,47 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.feat-3 {
+    height: 150px;
+    width: 150px;
+    background-color: #00f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feat-4 {
+    height: 150px;
+    width: 150px;
+    background-color: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feat-5 {
+    height: 150px;
+    width: 150px;
+    background-color: #f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feat-6 {
+    height: 150px;
+    width: 150px;
+    background-color: #0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
