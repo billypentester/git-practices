@@ -51,3 +51,14 @@ body {
 .history-card:hover {
     transform: translateY(-5px);
 }
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
