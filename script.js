@@ -1,6 +1,6 @@
 "use Strict";
 
-const historyItems = 6;
+const historyItems = 8;
 
 function randomizeColor() {
 
