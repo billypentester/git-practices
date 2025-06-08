@@ -1,6 +1,6 @@
 "use Strict";
 
-const historyItems = 0;
+const historyItems = 3;
 
 function createHistoryItem(title, description) {
     const historyItem = document.createElement("div");
