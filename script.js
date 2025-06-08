@@ -2,7 +2,20 @@
 
 const historyItems = 6;
 
+function randomizeColor() {
 
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const brightness = (r + g + b) / 3;
+    
+    const lightThreshold = 300;
+    if (brightness < lightThreshold) {
+        const factor = lightThreshold / brightness;
+        return `rgb(${Math.min(255, Math.floor(r * factor))}, ${Math.min(255, Math.floor(g * factor))}, ${Math.min(255, Math.floor(b * factor))})`;
+    }
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
 function createHistoryItem(title, description) {
     const historyItem = document.createElement("div");
@@ -19,6 +32,7 @@ function createHistoryItem(title, description) {
 function addToHistory(item) {
     const history = document.querySelector(".history");
     const historyItem = createHistoryItem(item.title, item.description);
+    historyItem.style.backgroundColor = randomizeColor();
     history.appendChild(historyItem);
 }
 
