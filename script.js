@@ -19,7 +19,8 @@ function randomizeColor() {
 
 function createHistoryItem(title, description) {
     const historyItem = document.createElement("div");
-    historyItem.className = "history-card";
+    historyItem.classList.add("history-card");
+    historyItem.style.borderColor = randomizeColor();
     const titleElement = document.createElement("h1");
     titleElement.textContent = title;
     const descriptionElement = document.createElement("p");
@@ -32,7 +33,7 @@ function createHistoryItem(title, description) {
 function addToHistory(item) {
     const history = document.querySelector(".history");
     const historyItem = createHistoryItem(item.title, item.description);
-    historyItem.style.backgroundColor = randomizeColor();
+    historyItem.style.backgroundColor = item.color || randomizeColor();
     history.appendChild(historyItem);
 }
 
@@ -41,6 +42,7 @@ function addToHistory(item) {
 for(let i = 0; i < historyItems; i++) {
     addToHistory({
         title: `Item ${i + 1}`,
-        description: `This is item number ${i + 1} in the history.`
+        description: `This is item number ${i + 1} in the history.`,
+        color: randomizeColor()
     });
 }
