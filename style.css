@@ -62,3 +62,9 @@ body {
     display: inline-block;
     animation: marquee 15s linear infinite;
 }
+
+.empty-message {
+    color: #999;
+    font-size: 1.2em;
+    margin: 10px 20px;
+}
