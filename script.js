@@ -33,16 +33,42 @@ function createHistoryItem(title, description) {
 function addToHistory(item) {
     const history = document.querySelector(".history");
     const historyItem = createHistoryItem(item.title, item.description);
+    historyItem.setAttribute("data-id", item.id);
     historyItem.style.backgroundColor = item.color || randomizeColor();
     history.appendChild(historyItem);
 }
 
-
+// Generate random history items
 
 for(let i = 0; i < historyItems; i++) {
     addToHistory({
+        id: i + 1,
         title: `Item ${i + 1}`,
         description: `This is item number ${i + 1} in the history.`,
         color: randomizeColor()
     });
 }
+
+window.addEventListener("load", () => {
+    window.addEventListener("click", (event) => {
+        const target = event.target.closest(".history-card");
+        if(target) {
+            const itemId = target.getAttribute("data-id");
+            // it will vanish the item from the history
+            target.remove();
+            console.log(`Item with ID ${itemId} clicked and removed from history.`);
+        }
+        const history = document.querySelector(".history");
+        if (history.children.length === 0) {
+            const emptyMessage = document.createElement("p");
+            emptyMessage.textContent = "No history items available.";
+            emptyMessage.classList.add("empty-message");
+            history.appendChild(emptyMessage);
+        } else {
+            const emptyMessage = history.querySelector(".empty-message");
+            if (emptyMessage) {
+                emptyMessage.remove();
+            }
+        }
+    });
+});
